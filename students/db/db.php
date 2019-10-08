@@ -1,7 +1,7 @@
 <?php
 
 $servername = "localhost";
-$dbusername = "root";
+$dbusername = "root@localhost.com";
 $dbpassword = "root";
 $dbname = "hngi_miniclassroom";
 

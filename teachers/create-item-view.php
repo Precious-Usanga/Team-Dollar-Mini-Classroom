@@ -14,52 +14,45 @@
         <?php
             require "page-parts/navbar.php";
         ?>
+        
         <div class="content">
             <div class="container-fluid">
- 
-                 <div class="row">
-                    <div class="col-md-8">
+                <div class="row">
+                    <div class="col-lg-9 col-sm-6">
                         <div class="card">
-                            <div class="header">
-                                <h4 class="title">Create An Item</h4>
-                            </div>
-                            <div class="content">
-                                <form action="api/create-item.php" method="post">
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Item Name</label>
-                                                <input type="text" name="name" class="form-control" placeholder="Give your item a name" value="">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <h4 class="card-title">Create Item</h4>
+                                </div>
+                                <div class="card-body">
+									<form class="form" action="api/create-item.php" method="post">
+										<div class="form-body">
+											<div class="form-group form-label-group">
+												<input type="text" id="className" class="form-control square" placeholder="Item Name" name="name">
+												<label for="className">Item Name</label>
+											</div>
+											<div class="form-group form-label-group">
+												<textarea id="text-area" rows="4" class="form-control square" name="description" placeholder="Description"></textarea>
+                                                <label for="text-area">Description</label>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Description</label>
-                                                <textarea rows="5" name="description" class="form-control" placeholder="Say a little about your item">
-                                                    
-                                                </textarea>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    <input type="hidden" size="50" name="cid" value="<?php echo $_GET['cid'] ?>">
-                                    <input type="submit" name="submit" class="btn btn-info btn-fill pull-right" value="Create Item" />
-                                    <div class="clearfix"></div>
-
-                                </form>
+										</div>
+										<div class="form-actions">
+                                            <input type="hidden" size="50" name="cid" value="<?php echo $_GET['cid'] ?>">
+											<button type="submit" class="btn btn-info btn-sm mr-1">
+                                            <i class="fa fa-plus" aria-hidden="true"></i> <span>Create Item</span>
+                                            </button>
+											<button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-arrow-left" aria-hidden="true"></i> <span>Cancel</span>
+                                            </button>
+										</div>
+									</form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>               
-                
+                </div>
             </div>
         </div>
-
 
         <?php
             require "page-parts/html_footer.php";

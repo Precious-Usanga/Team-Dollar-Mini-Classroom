@@ -1,8 +1,8 @@
 <?php
 
 $servername = "localhost";
-$dbusername = "root";
-$dbpassword = "root";
+$dbusername = "root@localhost.com";
+$dbpassword = "";
 $dbname = "hngi_miniclassroom";
 
 // Create connection
